@@ -16,7 +16,7 @@ export const Login = () => {
     //     payload: nameRef.current.value
     //    })
     }
-    console.log('rendering Login');
+    // console.log('rendering Login');
   return (
     <form onSubmit={loginUser}>
         <label htmlFor="name">Name</label>

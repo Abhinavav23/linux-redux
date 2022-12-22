@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 export const AppName = () => {
-    const appName = useSelector((state) => state.appName)
+    const appName = useSelector((state) => state.authUser.appName)
     console.log('rendering AppName', appName);
     console.log();
   return (

@@ -4,9 +4,9 @@ import { logout } from '../ReduxFolder/auth/authAction';
 
 export const Profile = () => {
   const dispatch = useDispatch();
-  const userName = useSelector((state) => state.name);
-  
-  console.log('rendering Profile');
+  const userName = useSelector((state) => state.authUser.name);
+
+  // console.log('rendering Profile');
   const logoutUser = () => {
     dispatch(logout());
 
