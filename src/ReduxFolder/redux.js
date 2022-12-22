@@ -1,24 +1,17 @@
-import {legacy_createStore as createStore} from 'redux';
-// action creator
-export const updateLoginState = () => {
-    return {
-        type: 'update-login-state'
-    }
-}
+import { legacy_createStore as createStore } from "redux";
+import { authReducer } from "./auth/authReducer";
 
 // initial value
 const iniVal = {
-    isLoggedIn: false,
-    name: 'default'
-}
+    count: 10,
+  appName: "Newton Application",
+  isLoggedIn: false,
+  name: "default",
+};
 
-// reducer function
-const appReducer = (initialValue=iniVal, myAction) => {
-    // console.log(myAction);
-    if(myAction.type === 'my name is abhinav'){
-        return {isLoggedIn: true}
-    }
-    return initialValue
-}
+// {
+//     isLoggedIn: true,
+//     name: 'abhinav'
+// }
 
-export const myStore = createStore(appReducer);
+export const myStore = createStore(authReducer, iniVal);

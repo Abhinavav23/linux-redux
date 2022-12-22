@@ -1,19 +1,18 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import { AppName } from './AppName';
 import { Login } from './Login'
 import { Profile } from './Profile'
 
 export const Home = () => {
     // selecting and using values from redux-store
     const loggedInState = useSelector((result) => {
-        console.log(result);
         return result.isLoggedIn
     });
-    console.log(loggedInState);
-
+    console.log('rendering Home');
   return (
    <>
-    <h3>Home Page</h3>
+    <AppName/>
     {loggedInState ? <Profile/>:  <Login/>}
     {/* <Login/>
     <Profile/> */}
