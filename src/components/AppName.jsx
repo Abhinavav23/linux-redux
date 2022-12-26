@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux'
 
 export const AppName = () => {
     const appName = useSelector((state) => state.authUser.appName)
-    console.log('rendering AppName', appName);
-    console.log();
+    // console.log('rendering AppName', appName);
   return (
     <>
         <h2>AppName Comp</h2>

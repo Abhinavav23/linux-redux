@@ -1,5 +1,5 @@
 // initial value
-const iniVal = {
+export const iniAuthValue = {
     count: 10,
   appName: "Newton App",
   isLoggedIn: false,
@@ -7,9 +7,9 @@ const iniVal = {
 };
 
 // reducer function
-export const authReducer = (initialValue=iniVal, myAction) => {
-    // console.log('from reducer');
-    // console.log(initialValue);
+export const authReducer = (initialValue=iniAuthValue, myAction) => {
+    console.log('from auth reducer');
+    console.log(myAction);
     if (myAction.type === "login") {
       return { 
               ...initialValue,

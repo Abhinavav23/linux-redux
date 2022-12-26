@@ -9,7 +9,7 @@ import { Shop } from './Shop';
 export const Home = () => {
     // selecting and using values from redux-store
     const loggedInState = useSelector((result) => {
-        console.log(result);
+        // console.log(result);
         return result.authUser.isLoggedIn
     });
     // console.log('rendering Home');
